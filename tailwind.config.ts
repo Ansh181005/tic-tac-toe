@@ -61,7 +61,23 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				'player-x': 'hsl(var(--player-x))',
+				'player-o': 'hsl(var(--player-o))',
+				'game-board': 'hsl(var(--game-board))',
+				'game-cell': 'hsl(var(--game-cell))',
+				'game-cell-hover': 'hsl(var(--game-cell-hover))',
+				'winning-glow': 'hsl(var(--winning-glow))'
+			},
+			backgroundImage: {
+				'gradient-primary': 'var(--gradient-primary)',
+				'gradient-gaming': 'var(--gradient-gaming)',
+				'gradient-background': 'var(--gradient-background)'
+			},
+			boxShadow: {
+				'glow': 'var(--shadow-glow)',
+				'winning': 'var(--shadow-winning)',
+				'cell': 'var(--shadow-cell)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +100,40 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'pulse-glow': {
+					'0%, 100%': {
+						boxShadow: '0 0 20px hsl(var(--primary) / 0.3)'
+					},
+					'50%': {
+						boxShadow: '0 0 40px hsl(var(--primary) / 0.6)'
+					}
+				},
+				'slide-in': {
+					'0%': {
+						transform: 'scale(0) rotate(180deg)',
+						opacity: '0'
+					},
+					'100%': {
+						transform: 'scale(1) rotate(0deg)',
+						opacity: '1'
+					}
+				},
+				'winning-pulse': {
+					'0%, 100%': {
+						boxShadow: '0 0 30px hsl(var(--winning-glow) / 0.5)'
+					},
+					'50%': {
+						boxShadow: '0 0 60px hsl(var(--winning-glow) / 0.8)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
+				'slide-in': 'slide-in 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
+				'winning-pulse': 'winning-pulse 1s ease-in-out infinite'
 			}
 		}
 	},
